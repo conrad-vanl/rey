@@ -56,3 +56,5 @@ Spring based Transition States for React.js. Powered by Facebook's Rebound.js.
 - Chat Heads: http://convan.me/rey/demos/demo1/
 
 ### More docs coming
+
+<a href="http://differential.com"><img src="http://differential.com/images/logo.svg" width="24"></a> A <a href="http://differential.com">Differential<a/> Hack day Project
