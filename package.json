@@ -8,6 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build-demos": "webpack",
+    "gh-pages": "git fetch origin && git checkout gh-pages && git reset --hard origin/gh-pages && git rebase origin/master --force-rebase && npm run build-demos && git add . && git commit --amend --no-edit && git push origin gh-pages --force && git checkout master",
     "start": "node server.js"
   },
   "peerDependencies": {
