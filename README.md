@@ -50,4 +50,9 @@ Spring based Transition States for React.js. Powered by Facebook's Rebound.js.
   };
 ```
 
+## Demos (more coming):
+
+- Simple Photo Scale animation: http://convan.me/rey/demos/demo0/
+- Chat Heads: http://convan.me/rey/demos/demo1/
+
 ### More docs coming
