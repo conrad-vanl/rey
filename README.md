@@ -1,5 +1,7 @@
 # Rey
 
+Spring based Transition States for React.js. Powered by Facebook's Rebound.js.
+
 ``` javascript
   import Rey from 'rey';
 
