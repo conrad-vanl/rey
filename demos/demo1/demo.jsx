@@ -19,6 +19,7 @@ class Demo extends React.Component {
         }}
         onMouseMove={this.update.bind(this)}>
         <h3>Chat Heads</h3>
+        <p>Wait for images to load (may take a while), then move your mouse around</p>
         {this.props.heads.map((head, i) => (
           <div
             className="head"
