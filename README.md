@@ -12,7 +12,7 @@ Spring based Transition States for React.js. Powered by Facebook's Rebound.js.
   });
 
   // 2. Rey allows you to define your transition states
-  //    in a declarative manner (but you don't have to))
+  //    in a declarative manner (but you don't have to)
   const transitionStates = {
     opened: (springs) => {
       springs.opacity.setEndValue(100);
@@ -24,13 +24,13 @@ Spring based Transition States for React.js. Powered by Facebook's Rebound.js.
     }
   };
 
-  // 3. Rey is availalbe as a decorator, simply pass it
+  // 3. Rey is available as a decorator, simply pass it
   //    a function that creates springs, and the default
   //    transition state:
   @Rey(getSprings, transitionStates.opened)
   class Demo extends React.Component {
     // By default, Rey passes in two props:
-    // - 'transitionState': an object with your current spring values
+    // - `transitionState`: an object with your current spring values
     // - `setTransitionState`: a setter function to update the transition state
     render() {
       return (
@@ -54,6 +54,15 @@ Spring based Transition States for React.js. Powered by Facebook's Rebound.js.
 
 - Simple Photo Scale animation: http://convan.me/rey/demos/demo0/
 - Chat Heads: http://convan.me/rey/demos/demo1/
+
+## Features:
+
+- Allows full-access to Rebound.js's Spring methods
+- declaratively setup transition states (or don't...see Chat Heads)
+- easy integration with React's built-in TransitionGroup (demo to come)
+- "chain" springs to another, so they follow each other (see the Chat Heads example)
+- create a dynamic list of springs (ex: You have a `PostList` component and want a spring for every `Post`) (see the Chat Heads example)
+- and more...
 
 ### More docs coming
 
