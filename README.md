@@ -41,7 +41,7 @@ Spring based Transition States for React.js. Powered by Facebook's Rebound.js.
           Cool demo bro!
           <button
             type="button"
-            onClick={this.setTransitionState(transitionStates.closed)}}>
+            onClick={this.props.setTransitionState(transitionStates.closed)}}>
               Close
           </button>
         </div>
