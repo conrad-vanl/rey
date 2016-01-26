@@ -25,7 +25,7 @@ class Demo extends React.Component {
             className="head"
             key={i}
             style={{
-              background: `url(${head})`,
+              background: `red url(${head})`,
               width: 50,
               height: 50,
               position: 'absolute',
