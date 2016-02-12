@@ -41,7 +41,7 @@ Spring based Transition States for React.js. Powered by Facebook's Rebound.js.
           Cool demo bro!
           <button
             type="button"
-            onClick={this.props.setTransitionState(transitionStates.closed)}}>
+            onClick={() => this.props.setTransitionState(transitionStates.closed)}>
               Close
           </button>
         </div>
@@ -58,7 +58,7 @@ Spring based Transition States for React.js. Powered by Facebook's Rebound.js.
 ## Features:
 
 - Allows full-access to Rebound.js's Spring methods
-- declaratively setup transition states (or don't...see Chat Heads)
+- Ability to define transition states outside of component
 - easy integration with React's built-in TransitionGroup (demo to come)
 - "chain" springs to another, so they follow each other (see the Chat Heads example)
 - create a dynamic list of springs (ex: You have a `PostList` component and want a spring for every `Post`) (see the Chat Heads example)
