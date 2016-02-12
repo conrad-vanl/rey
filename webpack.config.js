@@ -55,7 +55,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.jsx?$/,
-      exclude: /build|bower_components|node_modules/,
+      exclude: /build|lib|bower_components|node_modules/,
       loaders: loaders
     }, {
       test: /\.css$/,

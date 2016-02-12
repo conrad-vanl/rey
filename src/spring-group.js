@@ -5,7 +5,7 @@ import presets from './presets';
 const funcsToProxy = [
   'setCurrentValue',
   'setEndValue',
-  'setVelocity'
+  'setVelocity',
 ];
 
 /**
@@ -24,7 +24,7 @@ export default class SpringGroup extends Spring {
    * the SpringSystem factory to create SpringGroups (and Springs),
    * so you probably shouldn't be calling this method directly.
    * @param  {Object} system    SpringSystem to attach to.
-   * @param  {Function} getKeys Used to setup the Springs needed for this group. 
+   * @param  {Function} getKeys Used to setup the Springs needed for this group.
    *                            This should return an array of names to identify
    *                            each spring by. The function is passed the `props`
    *                            object of your component, so that you can dynamically
@@ -33,7 +33,7 @@ export default class SpringGroup extends Spring {
    *                            prop, your `getKeys` argument might look like:
    *                            (props) => props.posts.map((post) => post.id)
    *                            Which just returns an array of your post ids. A number
-   *                            equal to posts.length of Springs will be created, with a 
+   *                            equal to posts.length of Springs will be created, with a
    *                            mapping to each post.id.
    * @param  {[type]} opts    Options to modify how SpringGroup behaves. Currently, there is
    *                          only one option available: `stagger`, which must be an integer
@@ -73,7 +73,7 @@ export default class SpringGroup extends Spring {
     let springLeader;
     springKeys.forEach((key, i) => {
       if (newSprings.hasOwnProperty(key)) {
-        const springToFollow = newSprings[springKeys[i - this._springConfig['stagger']]];
+        const springToFollow = newSprings[springKeys[i - this._springConfig.stagger]];
         if (!springToFollow) springLeader = newSprings[key];
         if (springToFollow) newSprings[key].follow(springToFollow);
       }
@@ -129,5 +129,5 @@ export default class SpringGroup extends Spring {
 funcsToProxy.forEach((property) => {
   SpringGroup.prototype[property] = function() {
     return this._springLeader ? this._springLeader[property].apply(this._springLeader, arguments) : undefined;
-  }
+  };
 });

@@ -1,5 +1,5 @@
 import {
-  SpringSystem as ReboundSpringSystem
+  SpringSystem as ReboundSpringSystem,
 } from 'rebound';
 
 import Spring from './spring';
@@ -12,7 +12,7 @@ import { globalLooper } from './looper';
 export default class SpringSystem extends ReboundSpringSystem {
   constructor() {
     const looper = Object.create({
-      run: () => globalLooper.run(() => this.loop(Date.now()))
+      run: () => globalLooper.run(() => this.loop(Date.now())),
     });
     super(looper);
   }
@@ -55,9 +55,9 @@ export default class SpringSystem extends ReboundSpringSystem {
   }
 
   forceSyncOps(isit = true) {
-    return this._forceSyncOps = isit;
+    this._forceSyncOps = isit;
   }
-  
+
   shouldForceSyncOps() {
     return this._forceSyncOps;
   }

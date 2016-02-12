@@ -9,7 +9,6 @@ import SpringSystem from './spring-system';
  * - `setTransitionState`: a function that you can use to update your Springs. It requires a
  *                         function as its only argument, which is immediately called with one argument -
  *                         an object with key-value pairs of spring instances
- *                         
  * @param  {function} getSprings           Called when component class is constructured,
  *                                         use to define Springs that are needed. Function must return
  *                                         an object with the keys as your Spring names and
@@ -25,7 +24,6 @@ import SpringSystem from './spring-system';
  *                                         updated. It must return an object, which is passed directly to the props on your
  *                                         component. It is called with one argument - an object containing key-value
  *                                         pairs of your springs and their current postion.
- *                                         
  *                                         By default, Rey simply passes this object back, but wrapped in another
  *                                         object with a single key - 'transitionState' - which is how
  *                                         `this.props.transitionState` is set within your component. If you provide
@@ -48,9 +46,9 @@ export default function(getSprings, defaultTransitionState, getTransitionState) 
     getTransitionState = (transitionState) => ({ transitionState });
   }
 
-  return function(Component) {
+  return function decorator(Component) {
     return class Composition extends React.Component {
-      constructor(props) {
+      constructor() {
         super(...arguments);
 
         this._callbacks = [];
@@ -100,6 +98,5 @@ export default function(getSprings, defaultTransitionState, getTransitionState) 
         });
       }
     };
-  }
-};
-
+  };
+}

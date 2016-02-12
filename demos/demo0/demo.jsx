@@ -1,5 +1,5 @@
 import React from 'react';
-import decorator from '../../lib/decorator';
+import decorator from '../../src/decorator';
 import { getSprings, transitionStates } from './transitions';
 
 @decorator(getSprings, transitionStates.default, transitionState => ({ springs: transitionState }))

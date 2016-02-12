@@ -1,4 +1,4 @@
-// import presets from '../../lib/presets';
+// import presets from '../../src/presets';
 
 export const getSprings = (springs) => ({
   // create a spring with default options, including default tension/friction
