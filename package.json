@@ -1,5 +1,5 @@
 {
-  "name": "Rey",
+  "name": "rey.js",
   "version": "0.0.1",
   "description": "Spring based Transition States for React.js.",
   "main": "src/rey.js",
