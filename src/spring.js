@@ -10,8 +10,8 @@ export default class Spring extends ReboundSpring {
     this.setOvershootClampingEnabled(!!opts.overshootClamping);
   }
 
-  // this needs to be over-written so that it 
-  // can tap into SpringSystem's loop so we fire the proper 
+  // this needs to be over-written so that it
+  // can tap into SpringSystem's loop so we fire the proper
   // "afterIntegration" callbacks on each position update
   setCurrentValue() {
     super(...arguments);
@@ -22,9 +22,9 @@ export default class Spring extends ReboundSpring {
   }
 
   follow(spring) {
-    if (this._following) this._following.removeListener(this._onFollow); 
+    if (this._following) this._following.removeListener(this._onFollow);
     this._following = spring.addListener({
-      onSpringUpdate: this._onFollow.bind(this)
+      onSpringUpdate: this._onFollow.bind(this),
     });
   }
 

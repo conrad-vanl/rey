@@ -12,3 +12,8 @@ bower_components
 .DS_Store
 
 /build/
+demos/**/all.*
+build/
+
+/lib
+/lib/*
